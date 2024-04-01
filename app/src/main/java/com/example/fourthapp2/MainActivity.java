@@ -9,6 +9,8 @@ import android.view.View;
 
 public class MainActivity extends AppCompatActivity {
 
+    FragmentManager fmanager = getSupportFragmentManager();
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -18,28 +20,22 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void Cat(View view){
-        FragmentManager fragmentManager = getSupportFragmentManager();
         Fragment1 f1 = new Fragment1();
-        FragmentTransaction ftransct = fragmentManager.beginTransaction();
-        fragmentManager.beginTransaction();
-        ftransct.replace(R.id.f1,f1,"f1");
+        FragmentTransaction ftransct = fmanager.beginTransaction();
+        ftransct.replace(R.id.f3,f1,"f1");
         ftransct.commit();
     }
 
     public void Dog(View view){
-        FragmentManager fragmentManager = getSupportFragmentManager();
-        Fragment1 f2 = new Fragment1();
-        FragmentTransaction ftransct = fragmentManager.beginTransaction();
-        fragmentManager.beginTransaction();
-        ftransct.replace(R.id.f2,f2,"f2");
+        Fragment2 f2 = new Fragment2();
+        FragmentTransaction ftransct = fmanager.beginTransaction();
+        ftransct.replace(R.id.f3,f2,"f2");
         ftransct.commit();
     }
 
     public void Bird(View view){
-        FragmentManager fragmentManager = getSupportFragmentManager();
-        Fragment1 f3 = new Fragment1();
-        FragmentTransaction ftransct = fragmentManager.beginTransaction();
-        fragmentManager.beginTransaction();
+        Fragment3 f3 = new Fragment3();
+        FragmentTransaction ftransct = fmanager.beginTransaction();
         ftransct.replace(R.id.f3,f3,"f3");
         ftransct.commit();
     }

@@ -12,13 +12,15 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:name="com.example.fourthapp2.Fragment1"
-        tools:ignore="MissingConstraints" />
+        tools:ignore="MissingConstraints"
+        app:layout_constraintBottom_toTopOf="@id/f2"/>
 
     <FrameLayout
         android:id="@+id/f2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        tools:ignore="MissingConstraints" />
+        tools:ignore="MissingConstraints"
+        app:layout_constraintBottom_toBottomOf="parent"/>
 
     <androidx.fragment.app.FragmentContainerView
         android:layout_width="match_parent"
